@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/0140870e-5233-4b50-9e99-b34983ecce4a/resourceGroups/PaasRG/providers/Microsoft.Web/sites/googlebookscloud",
+    "appService.deploySubpath": "."
+}

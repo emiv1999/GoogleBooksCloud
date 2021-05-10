@@ -10,7 +10,7 @@ const Login = () => {
 
   const history = useHistory();
   const handleLoginData = (event) => {
-    history.push("/main");
+    history.push("https://googlebookscloud.azurewebsites.net/main");
   };
 
   return (
@@ -19,7 +19,7 @@ const Login = () => {
         clientId="760606227333-u1kkd9mpde5ts9n2krmk4ikio8fppfcs.apps.googleusercontent.com"
         buttonText="Login"
         onSuccess={handleLoginData}
-        onFailure={responseGoogle}
+        onFailure={handleLoginData}
         href="/main"
       />
     </div>
