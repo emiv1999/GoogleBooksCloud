@@ -10,7 +10,7 @@ const Login = () => {
 
   const history = useHistory();
   const handleLoginData = (event) => {
-    history.push("https://googlebookscloud.azurewebsites.net/main");
+    history.push("/main");
   };
 
   return (
