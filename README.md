@@ -23,4 +23,28 @@ Documentație Books API: https://developers.google.com/books/docs/v1/using#Worki
 La deschiderea link-ului aplicației, utilizatorul este nevoit să se autentifice cu un cont Google (folosind Google OAuth 2.0) pentru a accesa aplicația. Se face un request către serverul Google și un redirect către mainpage odată ce autentificarea este reușită. Urmează requestul de GET către Books API, realizat prin introducerea de text pentru căutare de către utilizator. De asemenea, se poate regla numărul maxim de rezultate afișate.
 
 ### Capturi de ecran
+1. Pagina de start cu login
+![image](https://user-images.githubusercontent.com/83916304/117867786-81acdb00-b2a1-11eb-9857-6a6e44a71309.png)
 
+2. Login Prompt
+![image](https://user-images.githubusercontent.com/83916304/117868027-c46eb300-b2a1-11eb-8b91-286f7a217efe.png)
+
+3. Validare Google Login
+![image](https://user-images.githubusercontent.com/83916304/117868063-cfc1de80-b2a1-11eb-83e4-05b5608894ba.png)
+
+4. Main Page
+![image](https://user-images.githubusercontent.com/83916304/117868085-d94b4680-b2a1-11eb-96b4-59971edf4937.png)
+
+5. Search
+![image](https://user-images.githubusercontent.com/83916304/117868154-eec07080-b2a1-11eb-9ae3-ea75b2b8fa7a.png)
+
+6. Book card cu informații despre carte
+![image](https://user-images.githubusercontent.com/83916304/117868192-fb44c900-b2a1-11eb-9c2a-d2affa03c942.png)
+![image](https://user-images.githubusercontent.com/83916304/117868224-03046d80-b2a2-11eb-9aeb-aff6b79c5a1e.png)
+
+7. Redirecționare către preview-ul cărții
+![image](https://user-images.githubusercontent.com/83916304/117868257-0ac41200-b2a2-11eb-855d-3f7e503b853c.png)
+![image](https://user-images.githubusercontent.com/83916304/117868272-10b9f300-b2a2-11eb-9de6-2e5d0e64292d.png)
+
+Link Alternativ către screenshots în Google Drive:
+https://drive.google.com/drive/folders/1NDL5qGc2GNqfsDIX_y3nwzMWQEUt4k4_?usp=sharing
