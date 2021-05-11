@@ -1,70 +1,26 @@
 # Aplicație Books from Google
 
-Această aplicație simplă
+## Introducere și descrierea problemei
 
-## Available Scripts
+Această aplicație simplă are rol de a ajuta utilizatorii să găsească rapid si simplu cele mai relevante cărți pentru nevoile lor, în librăria Google Books. Dată fiind creșterea în popularitate a cărților în format electornic (e-books sau audiobooks) din ultimii ani și revenirea cititului printre hobby-urile ceva mai populare în timpul pandemiei de COVID-19, o astfel de librărie online devine o resursă importantă, fiind foarte simplu să găsim acolo cărți din toate ariile de interes. 
 
-In the project directory, you can run:
+Astfel, aplicația Node.js+React creată facilitează accesul la librărie pentru utilizatorii Google, fiind un mijloc simplu de căutare. Funcția de autentificare folosind un cont Google permite accesul imediat la conținuturile Google Books și la toate funcțiile oferite pentru utilizatori de către Google, oferind de asemenea o descriere scurtă pentru fiecare carte și posibilitatea de redirecționare către Preview-urile stil PDF ale cărților, direct în Google Books.
 
-### `npm start`
+După realizarea aplicației, aceasta a fost publicată în Cloud-ul Microsoft Azure, utilizând o subscripție Enterprise, folosind un Resource Group și Azure App Service cu deploy în regiunea West Europe (între cele mai apropiate de România). Pentru deployment-ul efectiv am utilizat extensia Azure App Service din Visual Studio Code.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Descriere APIs
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Google Auth
+API-ul pentru autentificare este oferit de Google, pentru care cheia OAuth a fost obținută cu ajutorul unui proiect în Google Cloud Platform folosind contul Google de student. Astfel am putut implementa pe pagina inițială un buton de Google Login, care deschide o fereastră de autentificare, ce redirecționează utilizatorii către pagina principală de search a aplicației.
 
-### `npm test`
+### Books API v1
+Pentru căutarea efectivă a cărților am utilizat Books API, parte a suitei de Google APIs, către care aplicația face un GET request pentru a returna rezultatele căutării inițiate, utilizând de asemenea parametri referitori la numărul maxim de rezultate de afișat și un index de start.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Documentație Books API: https://developers.google.com/books/docs/v1/using#WorkingVolumes
 
-### `npm run build`
+## Flux de date
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+La deschiderea link-ului aplicației, utilizatorul este nevoit să se autentifice cu un cont Google (folosind Google OAuth 2.0) pentru a accesa aplicația. Se face un request către serverul Google și un redirect către mainpage odată ce autentificarea este reușită. Urmează requestul de GET către Books API, realizat prin introducerea de text pentru căutare de către utilizator. De asemenea, se poate regla numărul maxim de rezultate afișate.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Capturi de ecran
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
